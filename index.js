@@ -1,7 +1,7 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 
-const generateHTML = require('./src/page-template.js');
+const generateHTML = require('./src/generateHTML');
 
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
@@ -65,21 +65,21 @@ const addManager = () => {
           }
       }
     }
-    .then(managerInput => {
-      const  { name, id, email, officeNumber } = managerInput; 
-      const manager = new Manager (name, id, email, officeNumber);
-
-      teamArray.push(manager); 
-      console.log(manager); 
-    })
   ])
+  .then(managerInput => {
+    const  { name, id, email, officeNumber } = managerInput; 
+    const manager = new Manager (name, id, email, officeNumber);
+
+    teamList.push(manager); 
+    console.log(manager); 
+  })
 };
   
 const newEmployee = () => {
   console.log(`
-    =================
+    ============================
     Adding employees to the team
-    =================
+    ============================
     `);
   
   return inquirer.prompt ([
@@ -173,12 +173,12 @@ const newEmployee = () => {
         employee = new Intern (name, id, email, school);
         console.log(employee);
     }
-    teamArray.push(employee);
+    teamList.push(employee);
 
     if (confirmAddEmployee) {
-        return addEmployee(teamArray); 
+        return newEmployee(teamList); 
     } else {
-        return teamArray;
+        return teamList;
     }
   })
 };
@@ -196,8 +196,8 @@ const writeFile = data => {
   
 addManager()
   .then(newEmployee)
-  .then(teamArray => {
-    return generateHTML(teamArray);
+  .then(teamList => {
+    return generateHTML(teamList);
   })
   .then(pageHTML => {
     return writeFile(pageHTML);

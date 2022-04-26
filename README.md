@@ -29,7 +29,7 @@ THEN I exit the application, and the HTML is generated
 ---
 
 # Challenge 08
-![GIF](dist/recording.gif)
+![GIF](assets/img/challenge10.gif)
 
 
 ## Purpose
