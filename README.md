@@ -29,17 +29,18 @@ THEN I exit the application, and the HTML is generated
 ---
 
 # Challenge 08
-![GIF](assets/img/challenge10.gif)
+![GIF](./assets/img/challenge10.gif)
 
 
 ## Purpose
-Quickly and easily generate a README file by using a command-line application to generate one. Allowing the project creator to devote more time working on the project.
+Quickly and easily generate a team profile by using a command-line application to generate one.
 
 ## Built With
+* HTML
+* CSS
 * Javascript
 * Node.js
 * inquirer.js
-* axios.js
 
 ## Website
 https://rosemariehalim.github.io/08-challenge/
@@ -49,12 +50,12 @@ https://rosemariehalim.github.io/08-challenge/
 ## Process
 
 * set up files
-* planned out code
-* installed axios and inquirer
+* planned out code using old assignments
+* installed inquirer
 * created required command-line questions
-* created functions to write README file
+* created functions to write HTML file
 * wrote function to initialize application
-* created link.js for function to link GitHub API
-* added functions for license badge and link
-* completed function to generate markdown
+* completed function to generate HTML
+* Set up CSS styles for page
 * tested and fixed code
+* Recorded screen and converted mp4 into GIF
