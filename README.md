@@ -40,6 +40,7 @@ Quickly and easily generate a team profile by using a command-line application t
 * CSS
 * Javascript
 * Node.js
+* Jest.js
 * inquirer.js
 
 ## Website
@@ -51,7 +52,7 @@ https://rosemariehalim.github.io/08-challenge/
 
 * set up files
 * planned out code using old assignments
-* installed inquirer
+* installed inquirer and Jest
 * created required command-line questions
 * created functions to write HTML file
 * wrote function to initialize application
